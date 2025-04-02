@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Suhani Kalra Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+      /* Typing Animation */
+      #typing-animation {
+        position: relative;
+        font-size: 30px;
+        font-weight: bold;
+        color: #fff;
+        overflow: hidden;
+        white-space: nowrap;
+        animation: typing 3s steps(20, end) infinite;
+      }
+      @keyframes typing {
+        from { width: 0; }
+        to { width: 100%; }
+      }
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+      .cute-hover:hover {
+        transform: scale(1.02);
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+
+  </head>
+  <body>
+  
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Suhani Kalra</a>
+        <!-- New Blog link (minimal) -->
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home-section" class="hero">
+      <div class="home-slider owl-carousel">
+        <div class="slider-item">
+          <div class="overlay"></div>
+          <div class="container">
+            <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end">
+              <div class="one-third js-fullheight order-md-last img" style="background-image:url(images/about-me.jpeg); border-radius: 50%; overflow: hidden;">
+                <div class="overlay"></div>
+              </div>
+              <div class="one-forth d-flex align-items-center ftco-animate">
+                <div class="text">
+                  <span class="subheading">Hello!</span>
+                  <h1 class="mb-4 mt-3">I'm <span>Suhani Kalra</span></h1>
+                  <span id="typing-animation"></span>
+                  <script>
+                    const typingAnimationElement = document.getElementById('typing-animation');
+                    const typingTexts = ['SDE Enthusiast', 'Data Science Explorer', 'Fast Learner'];
+                    function playTypingAnimation(text) {
+                      for (let i = 0; i < text.length; i++) {
+                        setTimeout(() => {
+                          typingAnimationElement.textContent += text[i];
+                        }, i * 150);
+                      }
+                      setTimeout(() => {
+                        typingAnimationElement.textContent = '';
+                        playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+                      }, text.length * 150 + 1000);
+                    }
+                    playTypingAnimation(typingTexts[0]);
+                  </script>
+                  <br><br>
+                  <h2>Final Year B.Tech at IIT Guwahati</h2>
+                  <p>
+                    <a href="https://www.linkedin.com/in/suhanikalra" class="btn btn-primary py-3 px-4">LinkedIn</a>
+                    <a href="https://github.com/suhanikalra" class="btn btn-white btn-outline-white py-3 px-4">My Works</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+      <div class="container">
+        <div class="row d-flex align-items-stretch">
+          <div class="col-md-6 col-lg-5 d-flex">
+            <div class="img-about img d-flex align-items-stretch">
+              <div class="overlay">
+                <div class="about-img">
+                  <img src="images/about-me.jpeg" class="img-fluid rounded b-shadow-a" alt="About Me">
+                </div>
+                <div class="about-info">
+                  <p><span class="title-s">Name: </span> <span>Suhani Kalra</span></p>
+                  <p><span class="title-s">Seeking: </span> <span>SDE / Data Science Roles</span></p>
+                  <p><span class="title-s">Experience: </span> <span>Embibe, Inter IIT Tech Meet</span></p>
+                  <p><span class="title-s">Location: </span> <span>Delhi, India</span></p>
+                </div>
+                <div class="skill-mf">
+                  <p class="title-s">Skills</p>
+                  <span>C++</span>
+                  <div class="progress"><div class="progress-bar" style="width: 90%"></div></div>
+                  <span>Python</span>
+                  <div class="progress"><div class="progress-bar" style="width: 85%"></div></div>
+                  <span>Node.js</span>
+                  <div class="progress"><div class="progress-bar" style="width: 80%"></div></div>
+                  <span>Machine Learning</span>
+                  <div class="progress"><div class="progress-bar" style="width: 85%"></div></div>
+                  <span>Web Development</span>
+                  <div class="progress"><div class="progress-bar" style="width: 80%"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+            <div class="row justify-content-start pb-3">
+              <div class="col-md-12 heading-section ftco-animate">
+                <h1 class="big">About</h1>
+                <h2 class="mb-4">About Me</h2>
+                <p>
+                  Hi, I'm Suhani—a final-year B.Tech student at IIT Guwahati with a unique blend of Civil Engineering fundamentals and a minor in Electronics & Communication. Passionate about software development and data science, I thrive on solving complex challenges and building impactful technology.
+                </p>
+                <p>
+                  My diverse background, bolstered by hands-on internships and competitive achievements, has equipped me with a robust technical foundation and a problem-solving mindset. Whether I’m developing scalable applications or exploring innovative data-driven insights, I aim to create solutions that make a difference.
+                </p>
+                <h3>What I Bring to the Table</h3>
+                <ul class="about-info mt-4 px-md-0 px-2">
+                  <li class="d-flex"><span>Profile:</span> <span>SDE & Data Science Enthusiast</span></li>
+                  <li class="d-flex"><span>Expertise:</span> <span>Backend Development, Machine Learning, Data Analytics</span></li>
+                  <li class="d-flex"><span>Education:</span> <span>B.Tech in Civil Engineering with ECE Minor</span></li>
+                  <li class="d-flex"><span>Languages:</span> <span>English, Hindi</span></li>
+                  <li class="d-flex"><span>Tools:</span> <span>Git, MongoDB, MySQL, VS Code</span></li>
+                  <li class="d-flex"><span>Libraries:</span> <span>Scikit-Learn, Pandas, Matplotlib</span></li>
+                  <li class="d-flex"><span>Interests:</span> <span>Tech Innovation, Creative Design, Business Strategy</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="counter-wrap ftco-animate d-flex mt-md-3">
+              <div class="text">
+                <p class="mb-4">
+                  <span class="number" data-number="10">0</span> <span>+</span>
+                  <span>&nbsp; Projects Completed</span>
+                </p>
+                <p>
+                  <a href="https://www.linkedin.com/in/suhanikalra" class="btn btn-primary py-3 px-3">Connect on LinkedIn</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume Section -->
+ 	<section class="ftco-section ftco-no-pb" id="resume-section">
+	  <div class="container">
+		<div class="row justify-content-center pb-5">
+		  <div class="col-md-10 heading-section text-center ftco-animate">
+			<h1 class="big big-2" style="font-size: 3rem; font-weight: bold;">Resume</h1>
+			<h2 class="mb-4" style="font-size: 2rem; color: #f3b90b;">Professional Journey</h2>
+			<p style="font-size: 1.2rem; color: #6c757d;">
+			  A dedicated professional with a passion for data science and software development. I have honed my skills through rigorous academic projects, internships, and real-world challenges.
+			</p>
+		  </div>
+		</div>
+		<div class="row justify-content-center">
+		  <div class="col-md-10">
+			<h1 class="big-4 text-center" style="font-size: 2.5rem; font-weight: bold; margin-bottom: 20px;">Experience</h1>
+			<div class="resume-wrap ftco-animate" style="background: #252627; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+			  <span class="date" style="font-size: 1.2rem; color: #6c757d;">May 2024 - July 2024</span>
+			  <h2 style="font-size: 1.5rem; font-weight: bold; margin-top: 10px;">Software Developer Intern</h2>
+			  <span class="position" style="font-size: 1.2rem; color: #ffb700;">Embibe</span>
+			  <ul class="mt-4" style="font-size: 1.1rem; color: #dee0e2;">
+				<li>Designed and implemented a forgery detection model using advanced statistical techniques.</li>
+				<li>Addressed class imbalance through SMOTE and data resampling, refining model performance.</li>
+				<li>Enhanced proficiency in Python, Pandas, and Scikit-Learn while developing fraud detection solutions.</li>
+			  </ul>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</section>
+      <!-- Centered Education Section with added animation -->
+      <section class="ftco-section ftco-no-pb text-center" id="education-section" style="padding: 50px 20px;">
+        <div class="container">
+          <div class="row">
+            <h1 class="big-4" style="font-size: 3rem; font-weight: bold; margin-bottom: 10px;">Education</h1>
+            <div class="underline" style="width: 100px; height: 4px; background: #007bff; margin: 0 auto;"></div>
+          </div>
+          <br>
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="resume-wrap ftco-animate animate__animated animate__fadeInUp" style="background: #232324; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                <span class="date" style="font-size: 1.2rem; color: #6c757d;">Nov 2021 - Jun 2025</span>
+                <h2 style="font-size: 1.5rem; font-weight: bold; margin-top: 10px;">Bachelor of Technology</h2>
+                <span class="position" style="font-size: 1.2rem; color: #ffb700;">Indian Institute of Technology Guwahati</span>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center mt-5">
+            <div class="col-md-6 text-center ftco-animate">
+              <p>
+                <a href="#" class="btn btn-primary py-3 px-4" style="font-size: 1.2rem; border-radius: 5px;">Download CV</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="ftco-section" id="project-section">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="blog-entry">
+            <a href="https://github.com/suhanikalra" class="block-20 zoom-effect" style="background-image: url('images/api.png');"></a>
+            <div class="text mt-3">
+              <h3><a href="https://github.com/suhanikalra">Scalable REST API System</a></h3>
+              <p>Designed secure and scalable RESTful APIs with JWT, role-based access, and advanced pagination.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="blog-entry">
+            <a href="https://github.com/suhanikalra" class="block-20 zoom-effect" style="background-image: url('images/meet.jpg');"></a>
+            <div class="text mt-3">
+              <h3><a href="https://github.com/suhanikalra">ConnectNow – Video Conferencing</a></h3>
+              <p>Developed a real-time video conferencing platform using WebRTC, Socket.IO, and React.js for seamless collaboration.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="blog-entry">
+            <a href="https://github.com/suhanikalra" class="block-20 zoom-effect" style="background-image: url('images/dij.png');"></a>
+            <div class="text mt-3">
+              <h3><a href="https://github.com/suhanikalra">Interactive Graph Algorithms Platform</a></h3>
+              <p>Created a dynamic web app to visualize algorithms like DFS, BFS, and Dijkstra using React.js and JavaScript.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="blog-entry">
+            <a href="https://github.com/suhanikalra" class="block-20 zoom-effect" style="background-image: url('images/cust.jpg');"></a>
+            <div class="text mt-3">
+              <h3><a href="https://github.com/suhanikalra">Customer Segmentation for Marketing</a></h3>
+              <p>Utilized PCA and KMeans++ clustering to segment customers, driving targeted marketing strategies.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="blog-entry">
+            <a href="https://github.com/suhanikalra" class="block-20 zoom-effect" style="background-image: url('images/churn.jpg');"></a>
+            <div class="text mt-3">
+              <h3><a href="https://github.com/suhanikalra">Churn Prediction for Streaming</a></h3>
+              <p>Developed machine learning models achieving 87% accuracy to predict user churn in a movie streaming service.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="blog-entry">
+            <a href="https://github.com/suhanikalra" class="block-20 zoom-effect" style="background-image: url('images/movie.jpg');"></a>
+            <div class="text mt-3">
+              <h3><a href="https://github.com/suhanikalra">Movie Genre Classification with BERT</a></h3>
+              <p>Fine-tuned a BERT-based classifier achieving 85% accuracy for nuanced movie genre classification.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center mt-5">
+        <div class="col-md-6 text-center ftco-animate">
+          <p>
+            <a href="https://github.com/suhanikalra" class="btn btn-primary py-3 px-5">View More Projects on GitHub</a>
+          </p>
+        </div>
+      </div>
+    </section>
+		  
+    <!-- Counter and Hire Me Section -->
+    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+        <div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="5">0</strong>
+                <span>Achievements</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="20">20</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="500">0</strong>
+                <span>Cups of Coffee</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ftco-section ftco-hireme img margin-top" style="background: linear-gradient(to bottom, rgb(24, 23, 23), transparent);">
+        <div class="row justify-content-center">
+          <div class="col-md-7 ftco-animate text-center">
+            <h2>Discover More on <span>GitHub</span></h2>
+            <div class="heading">
+              <h4>I love solving real-world problems &amp; uncovering hidden data stories</h4>
+              <br>
+              <p><a href="https://github.com/suhanikalra" class="btn btn-primary py-3 px-5">Visit GitHub</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Get in Touch</h2>
+            <p>If you have any questions, collaboration ideas, or just want to say hello, feel free to reach out!</p>
+          </div>
+        </div>
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-map-signs"></span>
+              </div>
+              <h3 class="mb-4">Address</h3>
+              <p>IIT Guwahati, India</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-phone2"></span>
+              </div>
+              <h3 class="mb-4">Phone</h3>
+              <p><a href="tel://0101010101">+91 8708549325</a></p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-paper-plane"></span>
+              </div>
+              <h3 class="mb-4">Email</h3>
+              <p><a href="mailto:suhani.iitg@gmail.com">suhani.iitg@gmail.com</a></p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-globe"></span>
+              </div>
+              <h3 class="mb-4">Download Resume</h3>
+              <p><a href="#">Click Here</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <br><br>
+          <div class="row justify-content-center">
+            <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+              <li class="ftco-animate normal-txt">Find me on</li>
+              <li class="ftco-animate"><a href="https://linkedin.com/in/suhanikalra"><span class="icon-linkedin"></span></a></li>
+              <li class="ftco-animate"><a href="https://github.com/suhanikalra"><span class="icon-github"></span></a></li>
+              <li class="ftco-animate"><a href="https://leetcode.com/pepperysalt"><span class="icon-code"></span></a></li>
+            </ul>
+          </div>
+          <br>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="ftco-footer ftco-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p>&copy; 2025 Suhani Kalra | All Rights Reserved</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Loader -->
+    <div id="ftco-loader" class="show fullscreen">
+      <svg class="circular" width="48px" height="48px">
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/>
+      </svg>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
