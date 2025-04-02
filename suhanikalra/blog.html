@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Suhani Kalra | Blog</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Same CSS references as your main template -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/ionicons.min.css">
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Custom Dark Theme & Styling -->
+  <style>
+    /* Overall page styling */
+    body {
+      background-color: #1a1a1a;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.8;
+    }
+    .bg-light {
+      background-color: #2a2a2a !important;
+    }
+    a {
+      color: #ff416c;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #ff4b2b;
+    }
+    h1, h2, h3 {
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    }
+    
+    /* Navbar */
+    nav.navbar {
+      background: #1e1e1e;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+    }
+    .navbar-brand, .navbar-dark .navbar-nav .nav-link {
+      color: #fff !important;
+    }
+    
+    /* Hero Section */
+    .hero-wrap {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+    }
+    .hero-wrap .overlay {
+      background: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .hero-wrap .slider-text {
+      position: relative;
+      z-index: 2;
+    }
+    
+    /* Blog Full Posts */
+    .blog-entry-full {
+      margin-bottom: 60px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid #444;
+    }
+    .blog-entry-full h2 {
+      margin-bottom: 10px;
+    }
+    .blog-entry-full p {
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+    .blog-entry-full em {
+      color: #ccc;
+    }
+    
+    /* More Posts Section */
+    .more-posts {
+      text-align: center;
+      padding: 40px 0;
+    }
+    .more-posts p {
+      margin-bottom: 20px;
+    }
+    
+    /* Buttons */
+    .btn.btn-primary {
+      background: linear-gradient(45deg, #ff416c, #ff4b2b);
+      border: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: bold;
+      padding: 12px 30px;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .btn.btn-primary:hover {
+      background: linear-gradient(45deg, #ff4b2b, #ff416c);
+      transform: scale(1.05);
+    }
+    
+    /* Footer */
+    footer.ftco-footer {
+      background: #000;
+      padding: 20px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  <!-- NAV BAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Suhani Kalra</a>
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <!-- Blog link is active on this page -->
+          <li class="nav-item active"><a href="blog.html" class="nav-link">Blog</a></li>
+          <!-- Link to Home -->
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO/HEADER SECTION -->
+  <section class="hero-wrap hero-wrap-2" style="background-image:url('images/blog_header.jpg');">
+    <div class="overlay"></div>
+    <div class="container text-center" style="position:relative; z-index:2;">
+      <div class="row no-gutters slider-text align-items-center justify-content-center">
+        <div class="col-md-9 ftco-animate">
+          <h1 class="mb-0 bread" style="margin-top:100px;">My Blog</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG LISTING SECTION -->
+  <section class="ftco-section bg-light">
+    <div class="container">
+      
+      <!-- Full Post 1: Mean vs Median -->
+      <div class="blog-entry-full ftco-animate">
+        <h2>Understanding Mean vs Median: Why the Median Prevails in Skewed Data</h2>
+        <p><em>Suhani  · Full Post</em></p>
+        <p>
+          Mean vs Median: When your data is skewed, the median is a much better indicator than the mean. That’s because it doesn’t get thrown off by extreme values or outliers. For example, if your numbers are 1, 2, 3, 4, and suddenly there’s a 1000 in the mix, the mean shoots up and doesn’t reflect the actual data — but the median stays grounded and gives a more realistic picture.
+        </p>
+        <p>
+          Quartiles are just percentiles in disguise — Q1 is the 25th percentile, Q2 is the median (50th), and Q3 is the 75th. We use these to create box plots that help us visually detect outliers and understand the spread. When it comes to variability or dispersion, we talk about IQR, variance, and standard deviation. IQR captures the middle 50% of the data — it’s literally the gap between Q3 and Q1.
+        </p>
+        <p>
+          Variance tells us how much the data points deviate from the mean on average (but squared), and standard deviation is just the square root of that, so it’s easier to interpret. Lastly, there’s kurtosis — it tells us how heavy or light the tails of the distribution are, meaning how many outliers are lurking. Depending on the shape, the distribution can be leptokurtic (more outliers), platykurtic (fewer), or mesokurtic (just right, like a normal distribution).
+        </p>
+        <p>
+          Skewness basically tells us how lopsided or asymmetric our data distribution is. If your data is perfectly symmetrical, it’s called zero skewness — think of a nice bell-shaped curve. But that’s rarely the case in real life. If the tail is longer on the right, it’s positively skewed — this means most values are on the lower end, but a few big numbers are dragging the mean upwards. On the flip side, if the tail is on the left, it’s negatively skewed — meaning most values are high, but a few small ones are pulling the mean down. The key thing is: skewness affects the mean more than the median, which is why the median often gives a better central tendency for skewed data.
+        </p>
+        <p>
+          As I traverse on My Campus to Corporate Journey, I would pen down what all I learn in these Days of Transition at My Training Here, just to revise all my concepts.
+        </p>
+      </div>
+      <hr>
+      
+      <!-- Full Post 2: Walmart Case Study -->
+      <div class="blog-entry-full ftco-animate">
+        <h2>Walmart Case Study: Revolutionizing Recommendation Systems</h2>
+        <p><em>Suhani  · Full Post</em></p>
+        <p>
+          I was presented a Walmart Case Study. So here is my Summary of the same:
+        </p>
+        <p>
+          Walmart has a huge inventory and customer base, and with such a vast inventory it becomes difficult to recommend the actual products that are needed by the customer. To navigate this problem, they built a recommendation system. The heart of Walmart’s recommendation system lies in the desire to answer one crucial question: “How can we personalize the shopping experience for each individual customer?” Driving this personalized system is the fuel of data, including purchase history, browsing behavior, and customer demographics. Algorithms like content and collaborative filtering, matrix multiplications, etc. play a role—and this is not a static system; it continuously learns and adapts, refining its suggestions based on customer interactions, feedback, and performance data.
+        </p>
+        <p>
+          Customer transactional data, including purchase history, order history, and cart history, provides a foundation. Customer interaction data, such as browsing behavior, search queries, and customer service interactions, further enriches the system. Demographic information, both registered and inferred, along with location data, helps tailor recommendations to individual needs and local preferences. Product information, encompassing detailed product descriptions, attributes, and relationships, plays a crucial role. Finally, Walmart incorporates external data sources such as market trends, economic indicators, and weather data to provide a comprehensive understanding of customer needs and market dynamics.
+        </p>
+        <p>
+          Walmart leverages its machine learning platform, Element, with Kubernetes-based MLOps, Neo4j for real-time recommendations, and Azure Cosmos DB for data processing—ensuring scalability and efficiency. Its Data Science team, backed by Walmart Labs, employs AI, big data, and cloud technologies to enhance inventory management, customer experience, and strategic decision-making.
+        </p>
+        <p>
+          Walmart's recommendation system is a perfect example of how data and technology can transform shopping experiences. By continuously learning from customer interactions and using advanced machine learning, big data, and cloud tech, Walmart ensures its recommendations stay relevant, personalized, and effective—making shopping easier and more engaging for customers while boosting business growth.
+        </p>
+      </div>
+      <hr>
+      
+      <!-- Full Post 3: OLAP vs OLTP -->
+      <div class="blog-entry-full ftco-animate">
+        <h2>OLAP vs OLTP: Diving Deeper into Analytical and Transactional Systems</h2>
+        <p><em>Suhani · Full Post</em></p>
+       
+        <p>
+          <strong>OLAP vs OLTP:</strong><br>
+          OLAP is used by data scientists and decision makers, while OLTP is used by the end user.
+        </p>
+        <p>
+          <strong>OL+A+P</strong> = Online Analytical Processing<br>
+          <strong>OL+T+P</strong> = Online Transaction Processing
+        </p>
+        <p>
+          OLTP is used for the current transactions by the user, while OLAP uses historic data to make analytical backend decisions. OLAP facilitates the performance of complex calculations, trend analysis, and data modeling. OLTP uses DBMS databases for managing transactions and ensures atomicity—complete transaction or nothing.
+        </p>
+        <p>
+          <strong>Types of OLAP</strong>
+        </p>
+        <p>
+          1. <strong>Relational OLAP (ROLAP):</strong><br>
+          • Uses relational databases (RDBMS).<br>
+          • Highly scalable, handling vast amounts of data.<br>
+          • Downside: Iterative drill-down queries are expensive.
+        </p>
+        <p>
+          2. <strong>Multidimensional OLAP (MOLAP):</strong><br>
+          • Uses precomputed multidimensional cubes instead of relational tables.<br>
+          • Advantage: Faster drill-down and improved query performance.<br>
+          • Suitable for complex analytical tasks.
+        </p>
+        <p>
+          3. <strong>Hybrid OLAP (HOLAP):</strong><br>
+          • Combines ROLAP and MOLAP.<br>
+          • Advantage: Balances performance and flexibility.<br>
+          • Supports both simple and complex analysis.
+        </p>
+        <p>
+          4. <strong>Desktop OLAP (DOLAP):</strong><br>
+          • A downloadable desktop version of OLAP.<br>
+          • Designed for localized data analysis.
+        </p>
+        <p>
+          <strong>Key OLAP Operations</strong><br>
+          1. Slicing — Selecting a specific subset of data from a cube.<br>
+          2. Dicing — Creating different views of the data cube by applying filters.<br>
+          3. Drill Down — Moving from summary to detailed data.<br>
+          4. Roll Up — Aggregating data to a higher level (opposite of Drill Down).<br>
+          5. Pivoting — Rotating data to view it from different perspectives.
+        </p>
+        <p>
+          <strong>OLAP + OLTP Integration</strong><br>
+          To integrate OLAP and OLTP, we use ETL (Extract, Transform, Load) mechanisms.
+        </p>
+        <p>
+          We will discuss ETL processes and data integration in our next blog!<br>
+          Stay tuned for more insights in our 60 Days of Learning series.
+        </p>
+      </div>
+      
+      <!-- More Posts (Redirect) -->
+      <div class="more-posts ftco-animate">
+        <h2 class="mb-4">More Posts</h2>
+        <p>For additional content, please visit my Medium profile.</p>
+        <p><a href="https://medium.com/@suhanii" target="_blank" class="btn btn-primary">Visit My Medium</a></p>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="ftco-footer ftco-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p>© 2025 Suhani Kalra | All Rights Reserved</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS (same as your main page) -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
