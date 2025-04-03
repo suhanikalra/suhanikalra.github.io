@@ -439,5 +439,119 @@
     <script src="js/jquery.animateNumber.min.js"></script>
     <script src="js/scrollax.min.js"></script>
     <script src="js/main.js"></script>
+
+        <!-- Chatbot Widget -->
+        <div id="chatbot-container" style="display: none; position: fixed; bottom: 80px; right: 20px; width: 300px; background-color: #fff; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); overflow: hidden; z-index: 1000; font-family: 'Poppins', sans-serif;">
+          <div id="chatbot-header" style="background-color: #007bff; color: #fff; padding: 10px; display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-weight: bold;">Chat with Me</span>
+            <button id="close-chatbot" style="background: transparent; border: none; color: #fff; font-size: 20px; cursor: pointer;">&times;</button>
+          </div>
+          <div id="chatbot-messages" style="height: 300px; padding: 15px; overflow-y: auto; color: #000;">
+            <!-- Chat messages will appear here -->
+          </div>
+          <div id="chatbot-input" style="display: flex; border-top: 1px solid #ccc;">
+            <input type="text" id="chatbot-user-input" placeholder="Type your message..." style="flex: 1; padding: 10px; border: none; outline: none; font-family: 'Poppins', sans-serif;">
+            <button id="chatbot-send" style="background-color: #007bff; color: #fff; border: none; padding: 10px 15px; cursor: pointer; font-family: 'Poppins', sans-serif;">Send</button>
+          </div>
+        </div>
+    
+        <!-- Chatbot Toggle Button -->
+        <button id="chatbot-toggle" style="position: fixed; bottom: 20px; right: 20px; background-color: #007bff; color: #fff; border: none; padding: 15px; border-radius: 50%; font-size: 16px; cursor: pointer; font-family: 'Poppins', sans-serif; box-shadow: 0 4px 10px rgba(0,0,0,0.2); z-index: 1000;">
+          Chat
+        </button>
+    
+        <!-- Chatbot Script -->
+        <script>
+          // Element references
+          const chatbotToggle = document.getElementById('chatbot-toggle');
+          const chatbotContainer = document.getElementById('chatbot-container');
+          const closeChatbot = document.getElementById('close-chatbot');
+          const chatbotMessages = document.getElementById('chatbot-messages');
+          const chatbotUserInput = document.getElementById('chatbot-user-input');
+          const chatbotSend = document.getElementById('chatbot-send');
+    
+          // Toggle widget visibility
+          chatbotToggle.addEventListener('click', () => {
+            chatbotContainer.style.display = 'block';
+            chatbotToggle.style.display = 'none';
+          });
+    
+          closeChatbot.addEventListener('click', () => {
+            chatbotContainer.style.display = 'none';
+            chatbotToggle.style.display = 'block';
+          });
+    
+          // Function to add a chat message to the widget
+          function addChatbotMessage(text, sender) {
+            const messageDiv = document.createElement('div');
+            messageDiv.style.marginBottom = '10px';
+            messageDiv.style.fontFamily = 'Poppins, sans-serif';
+            messageDiv.textContent = (sender === 'user' ? 'You: ' : 'Assistant: ') + text;
+            chatbotMessages.appendChild(messageDiv);
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+          }
+    
+         
+          const responseRules = [
+            { keywords: ['hello', 'hi'], response: 'Hello! How can I assist you today?' },
+            { keywords: ['project'], response: 'Feel free to browse my projects section for more details.' },
+            { keywords: ['cv', 'resume'], response: 'You can download my CV from the Contact section.' },
+            { keywords: ['blog'], response: 'Check out my blog for in-depth posts on various topics.' },
+            { keywords: ['skills', 'technologies'], response: 'I have experience in Python, C++, Node.js, and more.' },
+            { keywords: ['internship', 'experience'], response: 'I have interned at Embibe and participated in Inter IIT Tech Meet.' },
+            { keywords: ['education', 'degree'], response: 'I am pursuing a B.Tech in Civil Engineering with a minor in ECE at IIT Guwahati.' },
+            { keywords: ['location', 'where are you'], response: 'I am currently based in Delhi, India.' },
+            { keywords: ['contact', 'reach out'], response: 'You can contact me via email or LinkedIn.' },
+            { keywords: ['hobbies', 'interests'], response: 'I enjoy exploring new technologies, reading, and hiking.' },
+            { keywords: ['help', 'support'], response: 'I am here to assist you! What do you need help with?' },
+            { keywords: ['thank you', 'thanks'], response: 'You are welcome! If you have more questions, feel free to ask.' },
+            { keywords: ['goodbye', 'bye'], response: 'Goodbye! Have a great day!' },
+            { keywords: ['projects', 'portfolio'], response: 'You can view my projects on GitHub or in the Projects section.' },
+            { keywords: ['blog', 'articles'], response: 'Check out my blog for in-depth posts on various topics.' },
+            { keywords: ['achievements', 'awards'], response: 'I have received several accolades, including top performer at Inter IIT Tech Meet.' },
+            { keywords: ['languages'], response: 'I am fluent in English and Hindi.' },
+            { keywords: ['skills'], response: 'I have experience in Python, C++, Node.js, and more.' },
+            { keywords: ['experience'], response: 'I have interned at Embibe and participated in Inter IIT Tech Meet.' },
+            { keywords: ['education'], response: 'I am pursuing a B.Tech in Civil Engineering with a minor in ECE at IIT Guwahati.' },
+            { keywords: ['location'], response: 'I am currently based in Delhi, India.' },
+            { keywords: ['contact', 'reach out'], response: 'You can contact me via email or LinkedIn.' },
+            {keywords: ['suhani', 'kalra'], response: 'I am Suhani Kalra, a final year B.Tech student at IIT Guwahati.'},
+            {keywords: ['iit', 'guwahati'], response: 'I am studying at IIT Guwahati, pursuing a B.Tech in Civil Engineering.'},
+          ];
+    
+         
+          function getBotResponse(input) {
+            const lowerInput = input.toLowerCase();
+            for (const rule of responseRules) {
+              for (const keyword of rule.keywords) {
+                if (lowerInput.includes(keyword)) {
+                  return rule.response;
+                }
+              }
+            }
+            return "I'm not sure how to respond to that. Could you please rephrase?";
+          }
+    
+          // Handle sending a message
+          function sendMessage() {
+            const text = chatbotUserInput.value.trim();
+            if (text !== '') {
+              addChatbotMessage(text, 'user');
+              const response = getBotResponse(text);
+              setTimeout(() => {
+                addChatbotMessage(response, 'bot');
+              }, 500);
+              chatbotUserInput.value = '';
+            }
+          }
+    
+          chatbotSend.addEventListener('click', sendMessage);
+          chatbotUserInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+              sendMessage();
+            }
+          });
+        </script>
+    
   </body>
 </html>
