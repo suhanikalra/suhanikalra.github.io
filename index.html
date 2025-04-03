@@ -162,7 +162,7 @@
             <div class="counter-wrap ftco-animate d-flex mt-md-3">
               <div class="text">
                 <p class="mb-4">
-                  <span class="number" data-number="10">0</span> <span>+</span>
+                  <span class="number" data-number="18">0</span> <span>+</span>
                   <span>&nbsp; Projects Completed</span>
                 </p>
                 <p>
@@ -300,48 +300,57 @@
     </section>
 		  
     <!-- Counter and Hire Me Section -->
-    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
-      <div class="container">
-        <div class="row d-md-flex align-items-center">
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="5">0</strong>
-                <span>Achievements</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="20">20</strong>
-                <span>Projects</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="500">0</strong>
-                <span>Cups of Coffee</span>
-              </div>
-            </div>
+<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+  <div class="container">
+    <div class="row d-md-flex align-items-center">
+      <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+        <div class="block-18">
+          <div class="text">
+            <strong class="number" data-number="5">0</strong>
+            <span>Achievements</span>
           </div>
         </div>
       </div>
-      <div class="ftco-section ftco-hireme img margin-top" style="background: linear-gradient(to bottom, rgb(24, 23, 23), transparent);">
-        <div class="row justify-content-center">
-          <div class="col-md-7 ftco-animate text-center">
-            <h2>Discover More on <span>GitHub</span></h2>
-            <div class="heading">
-              <h4>I love solving real-world problems &amp; uncovering hidden data stories</h4>
-              <br>
-              <p><a href="https://github.com/suhanikalra" class="btn btn-primary py-3 px-5">Visit GitHub</a></p>
-            </div>
+      <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+        <div class="block-18">
+          <div class="text">
+            <strong class="number" data-number="18">18</strong>
+            <span>Projects</span>
           </div>
         </div>
       </div>
-    </section>
+      <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+        <div class="block-18">
+          <div class="text">
+            <strong class="number" data-number="600">600+</strong>
+            <span>DSA Problems Solved</span>
+            <small style="display:block; font-size:0.9rem;">LeetCode, CodeForces, HackerRank</small>
+          </div>
+        </div>
+      </div>
+      <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+        <div class="block-18">
+          <div class="text">
+            <strong class="number" data-number="475">475</strong>
+            <span>Cups of Coffee</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ftco-section ftco-hireme img margin-top" style="background: linear-gradient(to bottom, rgb(24, 23, 23), transparent);">
+    <div class="row justify-content-center">
+      <div class="col-md-7 ftco-animate text-center">
+        <h2>Discover More on <span>GitHub</span></h2>
+        <div class="heading">
+          <h4>I love solving real-world problems &amp; uncovering hidden data stories</h4>
+          <br>
+          <p><a href="https://github.com/suhanikalra" class="btn btn-primary py-3 px-5">Visit GitHub</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- Contact Section -->
     <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
@@ -486,12 +495,12 @@
             const messageDiv = document.createElement('div');
             messageDiv.style.marginBottom = '10px';
             messageDiv.style.fontFamily = 'Poppins, sans-serif';
-            messageDiv.textContent = (sender === 'user' ? 'You: ' : 'Assistant: ') + text;
+            messageDiv.textContent = (sender === 'user' ? 'You: ' : 'Bot: ') + text;
             chatbotMessages.appendChild(messageDiv);
             chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
           }
     
-         
+          // Define keyword-based responses
           const responseRules = [
             { keywords: ['hello', 'hi'], response: 'Hello! How can I assist you today?' },
             { keywords: ['project'], response: 'Feel free to browse my projects section for more details.' },
@@ -519,7 +528,7 @@
             {keywords: ['iit', 'guwahati'], response: 'I am studying at IIT Guwahati, pursuing a B.Tech in Civil Engineering.'},
           ];
     
-         
+          // Generate a bot response based on user input
           function getBotResponse(input) {
             const lowerInput = input.toLowerCase();
             for (const rule of responseRules) {
